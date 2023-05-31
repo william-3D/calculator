@@ -9,7 +9,13 @@ let symbol = "";
 for (let button of buttons) {
   button.addEventListener("click", () => {
     const { innerText: btnValue } = button;
-    display.innerText += btnValue;
     const btnValueIsSymbol = allSymbols.includes(btnValue);
+
+    if (firstValue && btnValueIsSymbol) {
+      symbol = btnValue;
+    } else if (!symbol) firstValue += btnValue;
+    else if (symbol) secondValue += btnValue;
+
+    display.innerText += btnValue;
   });
 }
