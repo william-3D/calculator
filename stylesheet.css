@@ -11,3 +11,11 @@
   width: 25em;
   margin: 5em auto;
 }
+
+.display {
+  background: #f9fbfb;
+  color: #000;
+  text-align: right;
+  font-size: 1.7em;
+  height: 6em;
+}
