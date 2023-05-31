@@ -30,6 +30,7 @@ for (let button of buttons) {
     const btnValueIsSymbol = allSymbols.includes(btnValue);
 
     if (!secondValue && btnValue === "=") return null;
+    if (btnValue === "⌫") return null;
 
     if (btnValue === "AC") {
       firstValue = secondValue = symbol = "";
