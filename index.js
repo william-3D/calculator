@@ -29,7 +29,13 @@ for (let button of buttons) {
     const { innerText: btnValue } = button;
     const btnValueIsSymbol = allSymbols.includes(btnValue);
 
+    if (btnValue === "AC") {
+      firstValue = secondValue = symbol = "";
+      return (display.innerText = "");
+    }
+
     if (firstValue && btnValueIsSymbol) {
+      secondValue && calculate();
       symbol = btnValue;
     } else if (!symbol) firstValue += btnValue;
     else if (symbol) secondValue += btnValue;
