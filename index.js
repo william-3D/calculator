@@ -29,6 +29,8 @@ for (let button of buttons) {
     const { innerText: btnValue } = button;
     const btnValueIsSymbol = allSymbols.includes(btnValue);
 
+    if (!secondValue && btnValue === "=") return null;
+
     if (btnValue === "AC") {
       firstValue = secondValue = symbol = "";
       return (display.innerText = "");
