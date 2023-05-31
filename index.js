@@ -16,6 +16,6 @@ for (let button of buttons) {
     } else if (!symbol) firstValue += btnValue;
     else if (symbol) secondValue += btnValue;
 
-    display.innerText += btnValue;
+    if (btnValue !== "=") display.innerText += btnValue;
   });
 }
