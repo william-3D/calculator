@@ -2,9 +2,16 @@ const display = document.querySelector(".display");
 const buttons = document.querySelector(".buttons").children;
 const allSymbols = ["+", "-", "X", "/", "%", "AC", "="];
 
+//declared as strings so we can concatenate
 let firstValue = "";
 let secondValue = "";
 let symbol = "";
+
+const calculate = () => {
+  //convert back to number
+  firstValue = parseFloat(firstValue);
+  secondValue = parseFloat(secondValue);
+};
 
 for (let button of buttons) {
   button.addEventListener("click", () => {
