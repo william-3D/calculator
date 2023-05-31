@@ -6,11 +6,22 @@ const allSymbols = ["+", "-", "X", "/", "%", "AC", "="];
 let firstValue = "";
 let secondValue = "";
 let symbol = "";
+let result = "";
 
 const calculate = () => {
   //convert back to number
   firstValue = parseFloat(firstValue);
   secondValue = parseFloat(secondValue);
+
+  if (symbol === "+") result = firstValue + secondValue;
+  if (symbol === "-") result = firstValue - secondValue;
+  if (symbol === "X") result = firstValue * secondValue;
+  if (symbol === "/") result = firstValue / secondValue;
+  if (symbol === "%") result = firstValue % secondValue;
+
+  display.innerText = result;
+  firstValue = result;
+  secondValue = "";
 };
 
 for (let button of buttons) {
