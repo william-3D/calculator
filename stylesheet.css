@@ -19,3 +19,47 @@
   font-size: 1.7em;
   height: 6em;
 }
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 0.7em 0;
+  margin: auto 0.5em;
+}
+
+.buttons button {
+  background: #f1f5f5;
+  color: #000;
+  height: 4em;
+  width: 4em;
+  margin: 0.5em;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 10px 10px 5px -5px rgba(0, 0, 0, 0.15);
+  border: unset;
+  font-size: large;
+}
+
+.buttons button:hover {
+  background: #ffffff;
+  box-shadow: 10px 10px 5px -5px rgba(130, 7, 197, 0.223);
+  border: 0.01em solid rgba(130, 7, 197, 0.223);
+}
+
+.buttons button:active {
+  transform: translateX(0.08em) translateY(0.08em);
+}
+
+.buttons .color {
+  font-weight: 600;
+  color: #630fb9;
+}
+
+.buttons .equals {
+  background-color: #7311d6;
+  color: #fff;
+}
+
+.buttons .equals:hover {
+  color: #000;
+}
