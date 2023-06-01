@@ -22,6 +22,8 @@ const calculate = () => {
   display.innerText = result;
   firstValue = result;
   secondValue = "";
+
+  display.innerHTML = Math.round(result * 1000) / 1000;
 };
 
 for (let button of buttons) {
