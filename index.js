@@ -46,3 +46,11 @@ for (let button of buttons) {
     if (btnValue !== "=") display.innerText += btnValue;
   });
 }
+
+const deleteButton = () => {
+  let currentValue = display.innerText;
+  currentValue = currentValue.slice(0, -1);
+  display.innerText = currentValue;
+};
+const deleteBtn = document.getElementById("delete");
+deleteBtn.addEventListener("click", deleteButton);
