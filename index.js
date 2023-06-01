@@ -19,6 +19,8 @@ const calculate = () => {
   if (symbol === "/") result = firstValue / secondValue;
   if (symbol === "%") result = firstValue % secondValue;
 
+  if (symbol === "/" && secondValue === 0) result = NaN;
+
   display.innerText = result;
   firstValue = result;
   secondValue = "";
